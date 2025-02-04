@@ -100,7 +100,7 @@ local plugins = {
 local opts = {}
 require("lazy").setup(plugins, opts)
 require('onedark').setup {
-    style = 'darker'
+    style = 'deep'
 }
 require('onedark').load()
 
