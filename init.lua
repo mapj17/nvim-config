@@ -104,8 +104,9 @@ local plugins = {
     "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
     "MunifTanjim/nui.nvim",
     -- {"3rd/image.nvim", opts = {}}, -- Optional image support in preview window: See `# Preview Mode` for more information
-  }
+  },
 },
+{ "nvim-tree/nvim-web-devicons", opts = {} },
 }
 local opts = {}
 require("lazy").setup(plugins, opts)
@@ -113,6 +114,7 @@ require('onedark').setup {
     style = 'deep'
 }
 require('onedark').load()
+require("nvim-web-devicons").setup({})
 
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<C-p>", builtin.find_files, {})
@@ -121,3 +123,4 @@ vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 vim.keymap.set("n", "<F2>", ":Neotree toggle<CR>", {})
 vim.keymap.set("n", "<F3>", ":Neotree reveal<CR>", {})
+
