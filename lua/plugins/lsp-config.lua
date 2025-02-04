@@ -18,7 +18,6 @@ return {
         local lspconfig = require("lspconfig")
         lspconfig.lua_ls.setup({})
         lspconfig.pylsp.setup({})
-        vim.keymap.set("n", "<leader>h", "vim.lsp.buf.hover", {})
         end
     }
 }
