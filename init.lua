@@ -18,7 +18,7 @@ vim.opt.showmode = false
 vim.schedule(function()
   vim.opt.clipboard = 'unnamedplus'
 end)
-
+--
 -- Enable break indent
 vim.opt.breakindent = true
 
@@ -47,7 +47,7 @@ vim.opt.inccommand = 'split'
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 7 
 
 -- [[ Basic Keymaps ]]
 -- Clear highlights on search when pressing <Esc> in normal mode
@@ -96,6 +96,16 @@ local plugins = {
         })
     end
 },
+{
+  "nvim-neo-tree/neo-tree.nvim",
+  branch = "v3.x",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+    "MunifTanjim/nui.nvim",
+    -- {"3rd/image.nvim", opts = {}}, -- Optional image support in preview window: See `# Preview Mode` for more information
+  }
+},
 }
 local opts = {}
 require("lazy").setup(plugins, opts)
@@ -109,3 +119,5 @@ vim.keymap.set("n", "<C-p>", builtin.find_files, {})
 --requires ripgrep
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
+vim.keymap.set("n", "<F2>", ":Neotree toggle<CR>", {})
+vim.keymap.set("n", "<F3>", ":Neotree reveal<CR>", {})
