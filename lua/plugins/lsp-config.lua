@@ -9,6 +9,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function ()
         --pylsp required python3-venv to be installed
+        --stylua had to be installed manually
         require("mason-lspconfig").setup({ensure_installed = {"lua_ls", "pylsp"}})
         end
     },
