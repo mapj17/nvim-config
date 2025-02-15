@@ -4,4 +4,4 @@
 --vim.keymap.set("n", "<leader>h", vim.lsp.buf.hover, {})
 --vim.keymap.set("n", "<leader>fd", vim.lsp.buf.definition, {})
 --vim.keymap.set("n", "<leader>fi", vim.lsp.buf.implementation, {})
---vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+vim.keymap.set("n", "<leader>af", vim.lsp.buf.format, {})
