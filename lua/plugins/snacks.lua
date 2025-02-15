@@ -1,5 +1,5 @@
 return {
-    {
+{
         "folke/snacks.nvim",
         priority = 1000,
         lazy = false,
@@ -20,6 +20,7 @@ return {
             scroll = { enabled = true },
             statuscolumn = { enabled = true },
             words = { enabled = true },
+            zen = {     toggles = {     dim = true,     git_signs = false,     mini_diff_signs = false,     },     win = {     backdrop = { transparent = false, blend = 99 },}} -- This needs to be 99, 100 results in same behaviour as default setup     },     
         },
         keys = {
            -- Top Pickers & Explorer
