@@ -25,7 +25,7 @@ vim.opt.breakindent = true
 -- Save undo history
 vim.opt.undofile = true
 
-vim.opt.ignorecase = false
+vim.opt.ignorecase = true
 vim.opt.smartcase = false
 
 -- Keep signcolumn on by default
@@ -61,3 +61,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+
+vim.opt.wrap = false
+
+vim.opt.guicursor = ""
