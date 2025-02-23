@@ -52,6 +52,9 @@ vim.opt.scrolloff = 7
 -- Clear highlights on search when pressing <Esc> in normal mode
 vim.keymap.set('n', '<leader>', '<cmd>nohlsearch<CR>')
 
+-- Toggle line wrap
+vim.keymap.set('n', '<leader>w', ':set wrap!<CR>')
+
 -- Highlight when yanking (copying) text
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking text',
