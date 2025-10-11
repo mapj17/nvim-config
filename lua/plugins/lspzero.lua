@@ -36,8 +36,6 @@ return {
 
         -- These are just examples. Replace them with the language
         -- servers you have installed in your system
-        require("lspconfig").gleam.setup({})
-        require("lspconfig").rust_analyzer.setup({})
 
         local cmp = require("cmp")
 

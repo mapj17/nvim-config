@@ -16,9 +16,8 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			local lspconfig = require("lspconfig")
-			lspconfig.lua_ls.setup({})
-			lspconfig.pylsp.setup({
+			vim.lsp.config("lua_ls", {})
+			vim.lsp.config("pylsp", {
 				settings = {
 					pylsp = {
 						plugins = {
@@ -29,7 +28,7 @@ return {
 					},
 				},
 			})
-			lspconfig.clangd.setup({})
+			vim.lsp.config("clangd", {})
 		end,
 	},
 }
