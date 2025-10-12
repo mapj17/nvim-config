@@ -12,7 +12,7 @@ return {
             dashboard = {
                 enabled = true,
                 config = function()
-                    vim.api.nvim_set_hl(0, "SnacksDashboardHeader", { fg = "#2AC3DE" })
+                    vim.api.nvim_set_hl(0, "SnacksDashboardHeader", { fg = "#FF007C" })
                 end,
                 preset = {
                     header = table.concat(require("ascii").art.misc.hydra.hydra, "\n"),
